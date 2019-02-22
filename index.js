@@ -30,5 +30,5 @@ io.on('connection', (socket) => {
 });
 
 http.listen(process.env.PORT || port, () => {
-  console.log(`The Island server is listening on port ${port}.`);
+  console.log(`The Island server is listening on port ${process.env.PORT || port}.`);
 });
