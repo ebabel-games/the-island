@@ -12,3 +12,11 @@ npm start
 ```
 
 Browse to http://localhost:3000
+
+## Deploy to Heroku
+```
+git push heroku master
+```
+
+For more details, see [Heroku documentation](https://dashboard.heroku.com/apps/the-island-game/deploy/heroku-git)
+
