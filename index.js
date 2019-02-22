@@ -10,20 +10,13 @@ app.use(express.static('public'));
 let chatLog = [];
 
 // Update the server chat log.
-// Emit a message to all connected players by default.
-const emitChatMessage = (m = [], sender = io) => {
+// Emit a message to all connected players.
+const emitChatMessage = (m = []) => {
   chatLog = chatLog.concat(m);
-  m.map(msg => sender.emit('chat message', msg));
+  m.map(msg => io.emit('chat message', msg));
 };
 
 io.on('connection', (socket) => {
-  emitChatMessage(chatLog, socket); // Only send the history to newly connected player.
-  emitChatMessage(['Player connected.']);
-
-  socket.on('disconnect', () => {
-    emitChatMessage(['Player disconnected.']);
-  });
-
   socket.on('chat message', (m) => {
     emitChatMessage([m]);
   });

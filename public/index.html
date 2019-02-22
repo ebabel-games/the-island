@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Socket.IO chat</title>
+    <title>The Island game</title>
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body { font: 13px Helvetica, Arial; }
@@ -14,7 +14,7 @@
     </style>
   </head>
   <body>
-    <ul id="messages"></ul>
+    <ol id="messages"></ol>
     <form id="f" action="">
       <input id="m" autocomplete="off" /><button>Send</button>
     </form>
@@ -32,9 +32,9 @@
         });
 
         socket.on('chat message', (m) => {
-          const p = document.createElement('p');
-          p.textContent = m;
-          document.body.appendChild(p);
+          const li = document.createElement('li');
+          li.textContent = m;
+          document.getElementById('messages').appendChild(li);
         });
       });
     </script>
