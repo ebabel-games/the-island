@@ -29,6 +29,6 @@ io.on('connection', (socket) => {
   });
 });
 
-http.listen(port, () => {
+http.listen(process.env.PORT || port, () => {
   console.log(`The Island server is listening on port ${port}.`);
 });
