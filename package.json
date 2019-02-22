@@ -1,0 +1,29 @@
+{
+  "name": "the-island",
+  "version": "1.0.0",
+  "description": "The Island is a a prototype of a multi-player game socket.io server to simulate a small piece of land where each player can place a building that decays over time.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ebabel-games/the-island.git"
+  },
+  "keywords": [
+    "socket.io",
+    "multiplayer",
+    "game"
+  ],
+  "author": "Thomas Amar <hello@ebabel.eu>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ebabel-games/the-island/issues"
+  },
+  "homepage": "https://github.com/ebabel-games/the-island#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  }
+}
